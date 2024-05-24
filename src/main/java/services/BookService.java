@@ -31,13 +31,11 @@ public class BookService {
     public void update(Book book){
         bookDao.update(book);
     }
-//
-//    public void delStoreById(Set<Store> stores){
-//        bookDao.delStoreById(stores);
-//    }
-//    public void delete(Book book){
-//        bookDao.delete(book);
-//    }
+
+    public void delete(Book book){
+        bookDao.delete(book);
+    }
+
 
     public void print(Book book){
         bookDao.print(book);

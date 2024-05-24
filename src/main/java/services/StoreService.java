@@ -46,6 +46,4 @@ public class StoreService {
         storeDao.print(stores);
     }
 
-
-
 }
