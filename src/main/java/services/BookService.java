@@ -36,6 +36,7 @@ public class BookService {
         bookDao.delete(book);
     }
 
+
     public void print(Book book){
         bookDao.print(book);
     }
