@@ -2,10 +2,8 @@ package services;
 
 import dao.BookDao;
 import models.Book;
-import models.Store;
 
 import java.util.List;
-import java.util.Set;
 
 public class BookService {
     private BookDao bookDao = new BookDao();
@@ -33,13 +31,13 @@ public class BookService {
     public void update(Book book){
         bookDao.update(book);
     }
-
-    public void delStoreById(Set<Store> stores){
-        bookDao.delStoreById(stores);
-    }
-    public void delete(Book book){
-        bookDao.delete(book);
-    }
+//
+//    public void delStoreById(Set<Store> stores){
+//        bookDao.delStoreById(stores);
+//    }
+//    public void delete(Book book){
+//        bookDao.delete(book);
+//    }
 
     public void print(Book book){
         bookDao.print(book);
