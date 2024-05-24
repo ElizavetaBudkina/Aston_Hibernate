@@ -3,11 +3,8 @@ package services;
 import dao.StoreDao;
 import lombok.NoArgsConstructor;
 import models.Store;
-import org.hibernate.Session;
-import utils.HibernateSessionFactoryUtil;
 
 import java.util.List;
-import java.util.Set;
 
 @NoArgsConstructor
 public class StoreService {
@@ -47,20 +44,6 @@ public class StoreService {
 
     public void print(List<Store> stores){
         storeDao.print(stores);
-    }
-
-    public void print(Set<Store> stores){
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-//
-        session.getTransaction().begin(); //открыть транзакцию
-
-        for (Store store :stores){
-            storeDao.print(store);
-
-        }
-        session.getTransaction().commit(); //сохраняем изменения
-        session.close(); //закрываем сессию
-
     }
 
 
